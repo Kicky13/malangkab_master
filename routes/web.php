@@ -39,4 +39,4 @@ Route::get('/site/update/{id}', 'SiteController@updateView');
 Route::post('/site/update/{id}', 'SiteController@update');
 
 Route::get('/periode', 'PeriodeController@index');
-Route::post('/periode/create', 'PeriodeController@create');
+Route::get('/periode/create', 'PeriodeController@create');

@@ -12,7 +12,8 @@ class Periode extends Model
     protected $primaryKey = 'periode_id';
     public $timestamps = 'false';
     protected $fillable = [
-        
+        'periode_month',
+        'periode_years'
     ];
 
     public function nowPeriode()

@@ -2,7 +2,7 @@
 
 @section('addButton')
     <li>
-        <a href="/periode/create" class="dropdown-toggle">
+        <a id="tambah" class="dropdown-toggle">
             <i class="material-icons">add</i>
             <p class="hidden-lg hidden-md">Add_Data</p>
         </a>
@@ -46,4 +46,33 @@
                 </div>
             </div>
         </div>
+@endsection
+
+@section('script')
+    <script>
+        $(document).ready(function () {
+            console.log('siap123');
+            $('#tambah').click(function () {
+               console.log('klik');
+                $('#msg').html();
+                var username = $(this).val();
+                $.ajax({
+                    type        :   'POST',
+                    url         :   '/periode/create',
+                    data        :   {
+                        "nilai" : 1
+                    }
+                }).done(function (data) {
+                    console.log(data);
+                    $('#msg').html(data);
+                    if (data=='1'){
+                        swal('Sorry...', 'Periode Already Exist!!', 'error');
+                    } else {
+                        location.reload();
+                        swal('Success', 'Periode Added', 'success');
+                    }
+                });
+            });
+        });
+    </script>
 @endsection
