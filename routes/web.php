@@ -14,7 +14,9 @@
 Route::get('/', function () {
     return view('coverpage');
 });
+
 Route::get('/kuesioner', 'KuesionerController@index');
+Route::get('/kuesioner/dimension', 'KuesionerController@dimensionIndex');
 Route::get('/kuesioner/dimension', 'KuesionerController@dimension');
 Route::get('/kuesioner/public1', 'KuesionerController@public1');
 Route::post('/kuesioner/tempInfor', 'KuesionerController@tempInfor');

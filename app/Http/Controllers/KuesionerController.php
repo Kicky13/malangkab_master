@@ -17,7 +17,8 @@ class KuesionerController extends Controller
 
     public function index()
     {
-
+        $data = Kuesioner::all();
+        return view('question.question.index', compact('data'));
     }
 
     public function public1()

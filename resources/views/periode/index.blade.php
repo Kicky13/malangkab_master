@@ -57,7 +57,7 @@
                 $('#msg').html();
                 var username = $(this).val();
                 $.ajax({
-                    type        :   'POST',
+                    type        :   'GET',
                     url         :   '/periode/create',
                     data        :   {
                         "nilai" : 1
