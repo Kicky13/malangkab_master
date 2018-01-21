@@ -17,7 +17,7 @@ class KuesionerController extends Controller
 
     public function index()
     {
-        $data = Kuesioner::all();
+        $data = Kuesioner::join('dimension', 'dimension.dimension_id', '=', 'question.dimension_id')->get();
         return view('question.question.index', compact('data'));
     }
 
@@ -73,5 +73,10 @@ class KuesionerController extends Controller
             ]);
         }
         return redirect('/kuesioner/public1');
+    }
+    public function destroyQuestion($id)
+    {
+        Kuesioner::find($id)->delete();
+        return redirect('/kuesioner');
     }
 }

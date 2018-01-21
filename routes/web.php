@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/kuesioner', 'KuesionerController@index');
+Route::get('/kuesioner/question/delete/{id}', 'KuesionerController@destroyQuestion');
 Route::get('/kuesioner/dimension', 'KuesionerController@dimensionIndex');
 Route::get('/kuesioner/dimension', 'KuesionerController@dimension');
 Route::get('/kuesioner/public1', 'KuesionerController@public1');

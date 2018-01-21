@@ -42,7 +42,8 @@
         <!--  CSS for Demo Purpose, don't include it in your project     -->
         <link href="/admin/css/demo.css" rel="stylesheet" />
         <!--     Fonts and icons     -->
-        <link href="../../../maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/admin/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/admin/css/material-design-iconic-font.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
     </head>
 
@@ -166,7 +167,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"> Dashboard </a>
+                    <a class="navbar-brand" href="#"> Signed As Admin </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
